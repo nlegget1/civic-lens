@@ -7,42 +7,30 @@
 
   <meta name="description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
   <meta name="author" content="Naijya Leggett">
-  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Civic Lens">
-  <meta property="og:description" content="Independent news, investigative journalism, alerts, and featured articles from Civic Lens.">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="images/civic-lens-preview.jpg">
   <meta property="og:url" content="https://example.com/civic-lens">
-  <meta property="og:type" content="website">
 
   <link rel="stylesheet" href="styles.css">
 
   <title>Civic Lens</title>
 </head>
 
-<body>
+<body class="light-mode">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header>
-    <button id="theme-toggle" aria-label="Toggle light or dark mode">
-      <svg width="35" height="35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <clipPath id="a">
-            <path d="m18.512 18.512h62.977v62.977h-62.977z"/>
-          </clipPath>
-        </defs>
-        <g clip-path="url(#a)">
-          <path d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531" fill="#333" fill-rule="evenodd"/>
-        </g>
-      </svg>
+    <button id="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+      Toggle Theme
     </button>
 
     <h1>Civic Lens</h1>
     <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
 
     <nav class="mobile-nav" aria-label="Main navigation">
-      <input type="checkbox" id="menu-toggle" hidden>
+      <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-button">Menu</label>
 
       <ul class="menu">
@@ -55,22 +43,28 @@
   </header>
 
   <main id="main-content">
-    <section aria-labelledby="welcome-heading">
+    <section class="intro" aria-labelledby="welcome-heading">
       <h2 id="welcome-heading">Welcome to Civic Lens</h2>
       <p>
-        We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling.
-        At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.
+        We are an independent news organization dedicated to unbiased reporting,
+        investigative journalism, and truth-driven storytelling. At Civic Lens,
+        our mission is to expose the facts, amplify marginalized voices, and
+        shine light on the systems that shape our society.
       </p>
       <blockquote>“We don't follow the narrative. We follow the facts.”</blockquote>
     </section>
 
-    <section id="breaking-news" aria-labelledby="breaking-news-heading">
-      <h2 id="breaking-news-heading">Breaking News</h2>
+    <section id="breaking-news" aria-labelledby="breaking-heading">
+      <h2 id="breaking-heading">Breaking News</h2>
 
       <div class="news-grid">
         <article>
           <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
-          <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
+          <p>
+            The Department of Justice has announced a full investigation into
+            decades of water distribution practices affecting tribal lands and
+            rural communities.
+          </p>
           <video controls>
             <source src="videos/water-management.mp4" type="video/mp4">
             Your browser does not support the video element.
@@ -79,7 +73,11 @@
 
         <article>
           <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
-          <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
+          <p>
+            Civil rights advocates argue that the bill disenfranchises thousands
+            of voters and potential voters of color and those in rural areas of
+            the country.
+          </p>
           <video controls>
             <source src="videos/voter-suppression.mp4" type="video/mp4">
             Your browser does not support the video element.
@@ -228,5 +226,20 @@
 
     <p>&copy; 2025 Civic Lens. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    toggleButton.addEventListener("click", () => {
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+      } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+      }
+    });
+  </script>
 </body>
 </html>
