@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <meta name="description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
   <meta name="author" content="Naijya Leggett">
+  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph -->
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Civic Lens">
-  <meta property="og:description" content="See clearly, know deeply, and act justly with Civic Lens, an independent news organization focused on truth-driven storytelling.">
+  <meta property="og:description" content="Independent news, investigative journalism, alerts, and featured articles from Civic Lens.">
+  <meta property="og:image" content="images/civic-lens-preview.jpg">
+  <meta property="og:url" content="https://example.com/civic-lens">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630">
-  <meta property="og:url" content="https://nlegget1.github.io/civic-lens/">
 
   <link rel="stylesheet" href="styles.css">
 
@@ -20,23 +22,30 @@
 </head>
 
 <body>
-
-  <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header>
-    <button id="theme-toggle" aria-label="Toggle light/dark mode">
-      Toggle Theme
+    <button id="theme-toggle" aria-label="Toggle light or dark mode">
+      <svg width="35" height="35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <clipPath id="a">
+            <path d="m18.512 18.512h62.977v62.977h-62.977z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#a)">
+          <path d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531" fill="#333" fill-rule="evenodd"/>
+        </g>
+      </svg>
     </button>
 
     <h1>Civic Lens</h1>
     <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
 
-    <nav aria-label="Main Navigation">
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle">Menu</label>
+    <nav class="mobile-nav" aria-label="Main navigation">
+      <input type="checkbox" id="menu-toggle" hidden>
+      <label for="menu-toggle" class="menu-button">Menu</label>
 
-      <ul>
+      <ul class="menu">
         <li><a href="#breaking-news">Breaking News</a></li>
         <li><a href="#featured-articles">Featured Articles</a></li>
         <li><a href="#alerts">Alerts</a></li>
@@ -46,96 +55,169 @@
   </header>
 
   <main id="main-content">
-
-    <!-- Welcome -->
-    <section>
-      <h2>Welcome to Civic Lens</h2>
+    <section aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome to Civic Lens</h2>
       <p>
-        We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. 
+        We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling.
         At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.
       </p>
       <blockquote>“We don't follow the narrative. We follow the facts.”</blockquote>
     </section>
 
-    <!-- Breaking News -->
-    <section id="breaking-news">
-      <h2>Breaking News</h2>
+    <section id="breaking-news" aria-labelledby="breaking-news-heading">
+      <h2 id="breaking-news-heading">Breaking News</h2>
 
-      <article>
-        <h3>Federal Investigation Launched into Water Mismanagement</h3>
-        <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting communities.</p>
-        <video controls>
-          <source src="videos/water-management.mp4" type="video/mp4">
-        </video>
-      </article>
+      <div class="news-grid">
+        <article>
+          <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+          <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
+          <video controls>
+            <source src="videos/water-management.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+        </article>
 
-      <article>
-        <h3>Voter Suppression Bill Faces Pushback</h3>
-        <p>Civil rights advocates argue that the bill disenfranchises thousands of voters.</p>
-        <video controls>
-          <source src="videos/voter-suppression.mp4" type="video/mp4">
-        </video>
-      </article>
+        <article>
+          <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
+          <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
+          <video controls>
+            <source src="videos/voter-suppression.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+        </article>
+      </div>
     </section>
 
-    <!-- Featured Articles -->
-    <section id="featured-articles">
-      <h2>Featured Articles</h2>
+    <section id="featured-articles" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Articles</h2>
 
-      <article>
-        <h3>The Cost of Silence</h3>
-        <p>Former employees speak out about ethical breaches in data privacy.</p>
-      </article>
+      <div class="article-grid">
+        <article>
+          <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
+          <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+        </article>
 
-      <article>
-        <h3>Unequal Justice</h3>
-        <p>An investigative series on cash bail and its impact.</p>
-      </article>
+        <article>
+          <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
+          <p>An investigative series on cash bail and its disproportionate impact.</p>
+        </article>
 
-      <article>
-        <h3>Invisible Work</h3>
-        <p>Humanizing the labor that keeps households and economies afloat.</p>
-      </article>
+        <article>
+          <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
+          <p>Humanizing the labor that keeps households and economies afloat.</p>
+        </article>
+
+        <article>
+          <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
+          <p>Data visualization showing systemic inequality in real estate today.</p>
+        </article>
+
+        <article>
+          <h3>Climate Injustice: Who Pays for Pollution?</h3>
+          <p>Communities of color bear the brunt of environmental damage.</p>
+        </article>
+
+        <article>
+          <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
+          <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+        </article>
+
+        <article>
+          <h3>Food Deserts and Corporate Abandonment</h3>
+          <p>Why access to nutrition is a zip code lottery.</p>
+        </article>
+
+        <article>
+          <h3>Policing Mental Health: A Broken Response System</h3>
+          <p>Examining police interactions with those in crisis.</p>
+        </article>
+
+        <article>
+          <h3>The Disinformation Economy</h3>
+          <p>Tracing profit motives behind fake news empires.</p>
+        </article>
+
+        <article>
+          <h3>Facing the Algorithm: AI and Racial Bias</h3>
+          <p>The coded inequalities that shape our lives.</p>
+        </article>
+
+        <article>
+          <h3>The Voting Maze</h3>
+          <p>A guide to understanding your rights amid changing laws.</p>
+        </article>
+
+        <article>
+          <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
+          <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Alerts Form -->
-    <section id="alerts">
-      <h2>Stay Informed. Stay Empowered.</h2>
+    <section id="alerts" aria-labelledby="alerts-heading">
+      <h2 id="alerts-heading">Stay Informed. Stay Empowered.</h2>
       <p>Receive text messages with the news you want to know.</p>
 
       <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+        <div class="form-row">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="mobile">Mobile</label>
-        <input type="tel" id="mobile" name="mobile" required>
+          <div>
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" required>
+          </div>
+        </div>
 
         <fieldset>
           <legend>Notification Preferences</legend>
 
-          <input type="checkbox" id="breaking" name="preferences">
-          <label for="breaking">Breaking News</label>
+          <label for="breaking">
+            <input type="checkbox" id="breaking" name="preferences" value="breaking-news">
+            Breaking News
+          </label>
 
-          <input type="checkbox" id="politics" name="preferences">
-          <label for="politics">Politics</label>
+          <label for="politics">
+            <input type="checkbox" id="politics" name="preferences" value="politics">
+            Politics
+          </label>
 
-          <input type="checkbox" id="weather" name="preferences">
-          <label for="weather">Weather</label>
+          <label for="weather">
+            <input type="checkbox" id="weather" name="preferences" value="weather">
+            Weather
+          </label>
 
-          <input type="checkbox" id="sports" name="preferences">
-          <label for="sports">Sports</label>
+          <label for="sports">
+            <input type="checkbox" id="sports" name="preferences" value="sports">
+            Sports
+          </label>
+
+          <label for="entertainment">
+            <input type="checkbox" id="entertainment" name="preferences" value="entertainment">
+            Entertainment
+          </label>
+
+          <label for="world">
+            <input type="checkbox" id="world" name="preferences" value="world">
+            World
+          </label>
+
+          <label for="financial">
+            <input type="checkbox" id="financial" name="preferences" value="financial">
+            Financial
+          </label>
         </fieldset>
 
         <button type="submit">Subscribe</button>
       </form>
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer id="social">
     <h2>Follow Us</h2>
+
     <ul>
       <li><a href="#">Twitter/X</a></li>
       <li><a href="#">Instagram</a></li>
@@ -144,8 +226,7 @@
       <li><a href="#">LinkedIn</a></li>
     </ul>
 
-    <p>&copy; 2025 Civic Lens</p>
+    <p>&copy; 2025 Civic Lens. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
